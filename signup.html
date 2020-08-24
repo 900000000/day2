@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="signin.css">
+        <script src="http://kit.fontawesome.com/f36990690a.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Sign-in</title>
+    </head>
+    <body>
+        <div class="box">
+            <div class="strip"></div>
+            <div class="head">
+                <i class="far fa-kiss fa-2x" id="emote"></i> &nbsp
+                <span>lazi Sign-in </span>
+                <div class="bituns">
+                  <div class="group"> <a href="#" class="myButton" id="in">SIGN-IN</a>
+                    <a href="#" class="myButton" id="leave">LEAVE</a>
+                </div> 
+                </div>
+
+            </div>
+            <div class="cover">
+            <div class="formbox">
+                <form>
+                    <i class="far fa-user fa-2x"></i> &nbsp  <input type="text" placeholder="UserName" required><br>
+                    <i class="fas fa-shield-alt fa-2x"></i>&nbsp  <input type="email" placeholder="Email" required><br>
+                    <i class="fas fa-mobile-alt fa-2x"></i> &nbsp <input type="tel" placeholder="Mobile no." required><br>
+                    <i class="fas fa-unlock fa-2x"></i>&nbsp  <input type="password" placeholder="Password" required><br>
+                    <i class="fas fa-lock fa-2x"></i>&nbsp  <input type="password" placeholder="Retype" required><br>
+                    <input type="submit" value="Sign-in">
+                </form>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function()
+        {
+            $("#in").click(function(){
+                $(".cover").css("transform" , "translateY(0px)");
+                $(".group").css("transform" , "translateY(-80px)");
+                $("span").css("color" ,"white");
+                $("#emote").removeClass("far fa-meh fa-2x");
+                $("#emote").removeClass("far fa-kiss fa-2x");
+                $("#emote").addClass("far fa-kiss-wink-heart fa-2x");
+                $("#emote").css("color","red");
+                   
+            })
+
+            $("#leave").click(function(){
+                $(".cover").css("transform" , "translateY(-489px)");
+                $(".group").css("transform" , "translateY(0px)");
+                $("span").css("color" ,"black");
+                $("#emote").removeClass("far fa-kiss-wink-heart fa-2x");
+                $("#emote").addClass("far fa-meh fa-2x");
+                $("#emote").css("color","red");
+            })
+        })
+    </script>
+</html>
